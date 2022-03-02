@@ -1,6 +1,5 @@
 import React from "react";
 
-
 /** Coin: displays image, heads/tails.
  * 
  * Props:
@@ -11,13 +10,15 @@ import React from "react";
  * 
  * App --> Coin
  */
-function Coin(){
-
-  function _getRandomAnswer(){
-    const randAnswerIdx = Math.floor(Math.random() * 2);
-    return randAnswerIdx;
-  };
-
+function Coin({currentFlip}){
+  
+  return (
+    <div className={currentFlip}>
+      <button className ="coinFace">
+        <span className="flipMsg">Flip Me</span>
+      </button>
+    </div>
+  )
 }
 
 export default Coin;
